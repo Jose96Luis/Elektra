@@ -12,18 +12,20 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationLink(destination: ProductListView()) {
-                    Text("Go to Product List")
-                        .foregroundColor(.white)
+                    Text("Ver Productos")
+                        .font(.title)
                         .padding()
                         .background(Color.blue)
-                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
             }
-            .navigationTitle("First Screen")
+            .navigationTitle("Inicio")
         }
     }
 }
 
+// Vista previa para ContentView
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

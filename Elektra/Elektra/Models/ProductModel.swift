@@ -6,12 +6,36 @@
 //
 
 import Foundation
+/*
+ struct ProductResponse: Codable {
+ let mensaje: String
+ let advertencia: String
+ let resultado: Resultado
+ }
+ 
+ struct Resultado: Codable {
+ let paginacion: Paginacion
+ let categoria: String
+ let productos: [Producto]
+ }
+ 
+ struct Paginacion: Codable {
+ let pagina: Int
+ let totalPaginas: Int
+ let totalRegistros: Int
+ let totalRegistrosPorPagina: Int
+ }*/
 
-struct Product: Codable, Identifiable {
-    let id: String
+struct Producto: Identifiable, Decodable {
+    let id: UUID
     let nombre: String
-    let precioRegular: Double
     let precioFinal: Double
-    let descuento: Bool
     let urlImagenes: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case nombre
+        case precioFinal
+        case urlImagenes
+    }
 }

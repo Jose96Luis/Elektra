@@ -8,15 +8,54 @@
 import SwiftUI
 
 struct ProductListView: View {
-    let products = ["Product 1", "Product 2", "Product 3"]
-    
+    @StateObject private var viewModel = ProductListViewModel()
+
     var body: some View {
-        List(products, id: \.self) { product in
-            NavigationLink(destination: ProductDetailView(product: product)) {
-                Text(product)
+        NavigationView {
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView("Cargando productos...")
+                } else if let errorMessage = viewModel.errorMessage {
+                    Text("Error: \(errorMessage)")
+                        .foregroundColor(.red)
+                } else {
+                    List(viewModel.products) { product in
+                        NavigationLink(destination: ProductDetailView(product: product)) {
+                            ProductRowView(product: product)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Productos")
+            .onAppear {
+                viewModel.fetchProducts()
             }
         }
-        .navigationTitle("Product List")
+    }
+}
+
+struct ProductRowView: View {
+    let product: Producto
+
+    var body: some View {
+        HStack {
+            if let imageUrl = product.urlImagenes.first, let url = URL(string: imageUrl) {
+                AsyncImage(url: url) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                } placeholder: {
+                    ProgressView()
+                }
+            }
+            VStack(alignment: .leading) {
+                Text(product.nombre)
+                    .font(.headline)
+                Text("$\(product.precioFinal, specifier: "%.2f")")
+                    .font(.subheadline)
+            }
+        }
     }
 }
 

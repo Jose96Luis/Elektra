@@ -8,31 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		131072772C40E0DD0050FFE9 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131072762C40E0DD0050FFE9 /* ProductModel.swift */; };
-		1310727B2C40E1030050FFE9 /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1310727A2C40E1030050FFE9 /* ProductRowView.swift */; };
 		1310727E2C40E1130050FFE9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1310727D2C40E1130050FFE9 /* ProductDetailView.swift */; };
 		131072802C40E11B0050FFE9 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1310727F2C40E11B0050FFE9 /* ProductListView.swift */; };
 		131072832C40E14A0050FFE9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131072822C40E14A0050FFE9 /* APIService.swift */; };
-		131072862C40E1BC0050FFE9 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131072852C40E1BC0050FFE9 /* ProductViewModel.swift */; };
-		131072892C40E1E20050FFE9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131072882C40E1E20050FFE9 /* NetworkError.swift */; };
 		13B954D82C40D3D2009E1FD9 /* ElektraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B954D72C40D3D2009E1FD9 /* ElektraApp.swift */; };
 		13B954DA2C40D3D2009E1FD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B954D92C40D3D2009E1FD9 /* ContentView.swift */; };
 		13B954DC2C40D3D3009E1FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B954DB2C40D3D3009E1FD9 /* Assets.xcassets */; };
 		13B954DF2C40D3D3009E1FD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B954DE2C40D3D3009E1FD9 /* Preview Assets.xcassets */; };
+		13DEE9FE2C4109A20031DBBE /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEE9FD2C4109A20031DBBE /* ProductListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		131072762C40E0DD0050FFE9 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
-		1310727A2C40E1030050FFE9 /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
 		1310727D2C40E1130050FFE9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		1310727F2C40E11B0050FFE9 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		131072822C40E14A0050FFE9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		131072852C40E1BC0050FFE9 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		131072882C40E1E20050FFE9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		13B954D42C40D3D2009E1FD9 /* Elektra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elektra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B954D72C40D3D2009E1FD9 /* ElektraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElektraApp.swift; sourceTree = "<group>"; };
 		13B954D92C40D3D2009E1FD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13B954DB2C40D3D3009E1FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B954DE2C40D3D3009E1FD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		13DEE9FD2C4109A20031DBBE /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		13DEE9FF2C410D540031DBBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +54,6 @@
 		131072792C40E0F20050FFE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1310727A2C40E1030050FFE9 /* ProductRowView.swift */,
 				1310727D2C40E1130050FFE9 /* ProductDetailView.swift */,
 				1310727F2C40E11B0050FFE9 /* ProductListView.swift */,
 			);
@@ -75,17 +71,9 @@
 		131072842C40E19B0050FFE9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				131072852C40E1BC0050FFE9 /* ProductViewModel.swift */,
+				13DEE9FD2C4109A20031DBBE /* ProductListViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		131072872C40E1D80050FFE9 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				131072882C40E1E20050FFE9 /* NetworkError.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		13B954CB2C40D3D2009E1FD9 = {
@@ -107,7 +95,7 @@
 		13B954D62C40D3D2009E1FD9 /* Elektra */ = {
 			isa = PBXGroup;
 			children = (
-				131072872C40E1D80050FFE9 /* Utils */,
+				13DEE9FF2C410D540031DBBE /* Info.plist */,
 				131072842C40E19B0050FFE9 /* ViewModels */,
 				131072812C40E1300050FFE9 /* NetWorking */,
 				131072792C40E0F20050FFE9 /* Views */,
@@ -203,10 +191,8 @@
 				13B954DA2C40D3D2009E1FD9 /* ContentView.swift in Sources */,
 				1310727E2C40E1130050FFE9 /* ProductDetailView.swift in Sources */,
 				131072772C40E0DD0050FFE9 /* ProductModel.swift in Sources */,
+				13DEE9FE2C4109A20031DBBE /* ProductListViewModel.swift in Sources */,
 				13B954D82C40D3D2009E1FD9 /* ElektraApp.swift in Sources */,
-				131072892C40E1E20050FFE9 /* NetworkError.swift in Sources */,
-				131072862C40E1BC0050FFE9 /* ProductViewModel.swift in Sources */,
-				1310727B2C40E1030050FFE9 /* ProductRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +329,7 @@
 				DEVELOPMENT_TEAM = 2PJC88X4U2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Elektra/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -372,6 +359,7 @@
 				DEVELOPMENT_TEAM = 2PJC88X4U2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Elektra/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
