@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = ProductViewModel()
-
     var body: some View {
-        ProductListView(viewModel: viewModel)
+        NavigationView {
+            VStack {
+                NavigationLink(destination: ProductListView()) {
+                    Text("Go to Product List")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+            }
+            .navigationTitle("First Screen")
+        }
     }
 }
 

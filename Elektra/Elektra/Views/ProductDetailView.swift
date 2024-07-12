@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct ProductDetailView: View {
-    let product: Product
-
+    let product: String
+    
     var body: some View {
         VStack {
-            if let imageUrl = product.urlImagenes.first {
-                AsyncImage(url: URL(string: imageUrl))
-                    .frame(width: 200, height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-            Text(product.nombre)
+            Text(product)
                 .font(.largeTitle)
                 .padding()
-            Text("Precio Regular: \(product.precioRegular, specifier: "%.2f")")
-            Text("Precio Final: \(product.precioFinal, specifier: "%.2f")")
-            Spacer()
+            
+            Text("Random product details go here.")
+                .padding()
         }
-        .padding()
+        .navigationTitle("Product Detail")
     }
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView(product: Product(id: "1", nombre: "Producto Ejemplo", precioRegular: 100, precioFinal: 80, descuento: true, urlImagenes: ["https://example.com/image.png"]))
+        ProductDetailView(product: "Product 1")
     }
 }
